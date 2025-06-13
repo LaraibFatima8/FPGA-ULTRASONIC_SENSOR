@@ -1,0 +1,24 @@
+NET "clk"  LOC = "C9"  | IOSTANDARD = LVCMOS33;
+NET "reset" LOC = "P11" | IOSTANDARD = LVCMOS33;
+
+# Ultrasonic Sensor (J1 Header)
+NET "trig"  LOC = "B4"  | IOSTANDARD = LVCMOS33;  # J1 Pin 1
+NET "echo"  LOC = "A4"  | IOSTANDARD = LVCMOS33;  # J1 Pin 2
+
+# LED Outputs (LD0-LD7) - Corrected for the 8-bit 'led' output
+NET "led[0]" LOC = "F12" | IOSTANDARD = LVCMOS33;
+NET "led[1]" LOC = "E12" | IOSTANDARD = LVCMOS33;
+NET "led[2]" LOC = "E11" | IOSTANDARD = LVCMOS33;
+NET "led[3]" LOC = "F11" | IOSTANDARD = LVCMOS33;
+NET "led[4]" LOC = "C11" | IOSTANDARD = LVCMOS33;
+NET "led[5]" LOC = "D11" | IOSTANDARD = LVCMOS33;
+NET "led[6]" LOC = "E9"  | IOSTANDARD = LVCMOS33;
+NET "led[7]" LOC = "F9"  | IOSTANDARD = LVCMOS33;
+
+# RS232 Serial Port (DTE)
+NET "RS232_DTE_TXD" LOC = "M13" | IOSTANDARD = LVCMOS33;
+NET "RS232_DTE_RXD" LOC = "U8"  | IOSTANDARD = LVCMOS33;  # Assuming you might use this in the future
+
+# RS232 Serial Port (DCE) -  These are usually for a direct PC connection.
+#NET "RS232_DCE_RXD" LOC = "R7"  | IOSTANDARD = LVCMOS33 ;
+#NET "RS232_DCE_TXD" LOC = "M14" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
